@@ -15,6 +15,7 @@
 		1FC3B080262D907D0035B247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC3B07E262D907D0035B247 /* LaunchScreen.storyboard */; };
 		1FC3B09B262DB3840035B247 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3B09A262DB3840035B247 /* CoreDataManager.swift */; };
 		1FC3B09E262DB7F60035B247 /* CoreDataManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3B09D262DB7F60035B247 /* CoreDataManager+Extensions.swift */; };
+		1FC3B0A1262DB9620035B247 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3B0A0262DB9620035B247 /* DataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1FC3B081262D907D0035B247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FC3B09A262DB3840035B247 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		1FC3B09D262DB7F60035B247 /* CoreDataManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Extensions.swift"; sourceTree = "<group>"; };
+		1FC3B0A0262DB9620035B247 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 		1FC3B096262D93B30035B247 /* GenericClasses */ = {
 			isa = PBXGroup;
 			children = (
+				1FC3B0A0262DB9620035B247 /* DataProvider.swift */,
 			);
 			path = GenericClasses;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				1FC3B075262D907C0035B247 /* FolderListViewController.swift in Sources */,
 				1FC3B071262D907C0035B247 /* AppDelegate.swift in Sources */,
 				1FC3B09E262DB7F60035B247 /* CoreDataManager+Extensions.swift in Sources */,
+				1FC3B0A1262DB9620035B247 /* DataProvider.swift in Sources */,
 				1FC3B073262D907C0035B247 /* SceneDelegate.swift in Sources */,
 				1FC3B09B262DB3840035B247 /* CoreDataManager.swift in Sources */,
 				1FC3B07B262D907C0035B247 /* ToDoList.xcdatamodeld in Sources */,
