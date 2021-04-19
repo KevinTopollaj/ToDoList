@@ -14,7 +14,7 @@ protocol DataProviderDelegate: class {
   func didDeleteItem(at indexPath: IndexPath)
 }
 
-final class DataProvider<T: NSManagedObject>: NSObject, NSFetchedResultsControllerDelegate {
+final class DataProvider<Model: NSManagedObject>: NSObject, NSFetchedResultsControllerDelegate {
   
   // MARK: - Properties -
   weak var delegate: DataProviderDelegate?
@@ -23,8 +23,8 @@ final class DataProvider<T: NSManagedObject>: NSObject, NSFetchedResultsControll
   private var sortDescriptors: [NSSortDescriptor]
   private var predicate: NSPredicate?
   
-  private lazy var request: NSFetchRequest<T> = {
-    let request = NSFetchRequest<T>(entityName: String(describing: T.self))
+  private lazy var request: NSFetchRequest<Model> = {
+    let request = NSFetchRequest<Model>(entityName: String(describing: Model.self))
     request.sortDescriptors = sortDescriptors
     if let predicate = predicate {
       request.predicate = predicate
@@ -32,8 +32,8 @@ final class DataProvider<T: NSManagedObject>: NSObject, NSFetchedResultsControll
     return request
   }()
   
-  private lazy var fetchedResultsController: NSFetchedResultsController<T> = {
-    let fetchedResults = NSFetchedResultsController<T>(fetchRequest: request,
+  private lazy var fetchedResultsController: NSFetchedResultsController<Model> = {
+    let fetchedResults = NSFetchedResultsController<Model>(fetchRequest: request,
                                                        managedObjectContext: managedObjectContext,
                                                        sectionNameKeyPath: nil, cacheName: nil)
     fetchedResults.delegate = self
@@ -59,7 +59,7 @@ final class DataProvider<T: NSManagedObject>: NSObject, NSFetchedResultsControll
     }
   }
   
-  func objectAtIndex(indexPath: IndexPath) -> T {
+  func objectAtIndex(indexPath: IndexPath) -> Model {
     return fetchedResultsController.object(at: indexPath)
   }
   
