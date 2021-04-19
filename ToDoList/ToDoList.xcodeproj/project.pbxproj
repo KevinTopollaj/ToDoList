@@ -17,6 +17,7 @@
 		1FC3B09E262DB7F60035B247 /* CoreDataManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3B09D262DB7F60035B247 /* CoreDataManager+Extensions.swift */; };
 		1FC3B0A1262DB9620035B247 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3B0A0262DB9620035B247 /* DataProvider.swift */; };
 		1FC3B0A4262E29760035B247 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3B0A3262E29760035B247 /* DataSource.swift */; };
+		1FC3B0A7262E2E320035B247 /* GenericTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3B0A6262E2E320035B247 /* GenericTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1FC3B09D262DB7F60035B247 /* CoreDataManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Extensions.swift"; sourceTree = "<group>"; };
 		1FC3B0A0262DB9620035B247 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		1FC3B0A3262E29760035B247 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		1FC3B0A6262E2E320035B247 /* GenericTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			children = (
 				1FC3B0A0262DB9620035B247 /* DataProvider.swift */,
 				1FC3B0A3262E29760035B247 /* DataSource.swift */,
+				1FC3B0A6262E2E320035B247 /* GenericTableView.swift */,
 			);
 			path = GenericClasses;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				1FC3B073262D907C0035B247 /* SceneDelegate.swift in Sources */,
 				1FC3B09B262DB3840035B247 /* CoreDataManager.swift in Sources */,
 				1FC3B0A4262E29760035B247 /* DataSource.swift in Sources */,
+				1FC3B0A7262E2E320035B247 /* GenericTableView.swift in Sources */,
 				1FC3B07B262D907C0035B247 /* ToDoList.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
