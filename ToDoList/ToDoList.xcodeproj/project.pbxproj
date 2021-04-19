@@ -13,6 +13,8 @@
 		1FC3B07B262D907C0035B247 /* ToDoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3B079262D907C0035B247 /* ToDoList.xcdatamodeld */; };
 		1FC3B07D262D907D0035B247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC3B07C262D907D0035B247 /* Assets.xcassets */; };
 		1FC3B080262D907D0035B247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC3B07E262D907D0035B247 /* LaunchScreen.storyboard */; };
+		1FC3B09B262DB3840035B247 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3B09A262DB3840035B247 /* CoreDataManager.swift */; };
+		1FC3B09E262DB7F60035B247 /* CoreDataManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3B09D262DB7F60035B247 /* CoreDataManager+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1FC3B07C262D907D0035B247 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FC3B07F262D907D0035B247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FC3B081262D907D0035B247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FC3B09A262DB3840035B247 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		1FC3B09D262DB7F60035B247 /* CoreDataManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				1FC3B079262D907C0035B247 /* ToDoList.xcdatamodeld */,
+				1FC3B09A262DB3840035B247 /* CoreDataManager.swift */,
+				1FC3B09D262DB7F60035B247 /* CoreDataManager+Extensions.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -194,7 +200,9 @@
 			files = (
 				1FC3B075262D907C0035B247 /* FolderListViewController.swift in Sources */,
 				1FC3B071262D907C0035B247 /* AppDelegate.swift in Sources */,
+				1FC3B09E262DB7F60035B247 /* CoreDataManager+Extensions.swift in Sources */,
 				1FC3B073262D907C0035B247 /* SceneDelegate.swift in Sources */,
+				1FC3B09B262DB3840035B247 /* CoreDataManager.swift in Sources */,
 				1FC3B07B262D907C0035B247 /* ToDoList.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
