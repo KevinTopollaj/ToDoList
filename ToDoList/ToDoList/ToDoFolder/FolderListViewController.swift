@@ -49,7 +49,9 @@ class FolderListViewController: UIViewController {
 
   // MARK: - Actions -
   @objc private func didTapNew(_ sender: UIButton) {
-    print("New button tapped")
+    let addNewItemViewController = AddNewItemViewController()
+    addNewItemViewController.delegate = self
+    present(addNewItemViewController, animated: true)
   }
   
   // MARK: - Subviews and Constraints -
@@ -75,3 +77,10 @@ class FolderListViewController: UIViewController {
   }
 }
 
+// MARK: - AddNewItemViewControllerDelegate -
+extension FolderListViewController: AddNewItemViewControllerDelegate {
+  func saveNewItem(item: String) {
+    CoreDataManager.shared.saveFolder(name: item)
+    tableView.performFetch()
+  }
+}

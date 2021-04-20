@@ -38,7 +38,7 @@ final class FolderTableViewCell: UITableViewCell {
     fatalError("init(coder:) has not been implemented")
   }
   
-  // MARK: - Helper Methods -
+  // MARK: - Subviews and Constraints -
   func setupView() {
     contentView.addSubview(folderTitle)
     setupConstraints()
@@ -48,8 +48,8 @@ final class FolderTableViewCell: UITableViewCell {
     NSLayoutConstraint.activate([
       folderTitle.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
       folderTitle.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-      folderTitle.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-      folderTitle.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
+      folderTitle.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+      folderTitle.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)
     ])
   }
 }
