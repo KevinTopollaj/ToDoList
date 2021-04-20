@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F523C78262EB8A90015F86E /* FolderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F523C77262EB8A90015F86E /* FolderTableViewCell.swift */; };
 		1FC3B071262D907C0035B247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3B070262D907C0035B247 /* AppDelegate.swift */; };
 		1FC3B073262D907C0035B247 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3B072262D907C0035B247 /* SceneDelegate.swift */; };
 		1FC3B075262D907C0035B247 /* FolderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3B074262D907C0035B247 /* FolderListViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F523C77262EB8A90015F86E /* FolderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderTableViewCell.swift; sourceTree = "<group>"; };
 		1FC3B06D262D907C0035B247 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC3B070262D907C0035B247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FC3B072262D907C0035B247 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				1FC3B074262D907C0035B247 /* FolderListViewController.swift */,
+				1F523C77262EB8A90015F86E /* FolderTableViewCell.swift */,
 			);
 			path = ToDoFolder;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FC3B075262D907C0035B247 /* FolderListViewController.swift in Sources */,
+				1F523C78262EB8A90015F86E /* FolderTableViewCell.swift in Sources */,
 				1FC3B071262D907C0035B247 /* AppDelegate.swift in Sources */,
 				1FC3B09E262DB7F60035B247 /* CoreDataManager+Extensions.swift in Sources */,
 				1FC3B0A1262DB9620035B247 /* DataProvider.swift in Sources */,
