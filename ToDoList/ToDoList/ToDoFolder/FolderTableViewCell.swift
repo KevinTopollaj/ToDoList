@@ -23,7 +23,6 @@ final class FolderTableViewCell: UITableViewCell {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-    label.textColor = .darkGray
     label.numberOfLines = 0
     return label
   }()
