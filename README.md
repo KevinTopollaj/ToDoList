@@ -30,7 +30,7 @@ The application views are all written in code.
 * Xcode
 * UIKit
 * Foundation
-* NSCache
+* CoreData
 
 ## Architecture
 #### Model-View-ViewModel (MVVM):
