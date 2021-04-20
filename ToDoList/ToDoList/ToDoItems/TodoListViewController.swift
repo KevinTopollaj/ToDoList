@@ -1,28 +1,31 @@
 //
-//  ViewController.swift
+//  TodoListViewController.swift
 //  ToDoList
 //
-//  Created by Kevin Topollaj on 19.4.21.
+//  Created by Kevin Topollaj on 20.4.21.
 //
 
-import CoreData
 import UIKit
 
-class FolderListViewController: UIViewController {
+final class TodoListViewController: UIViewController {
+  
+  // MARK: - Properties -
+  var folder: String
   
   // MARK: - UI -
-  private lazy var tableView: GenericTableView<FolderTableViewCell, TodoFolder> = {
+  private lazy var tableView: GenericTableView<TodoTableViewCell, TodoItem> = {
     let sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
-    let dataProvider = DataProvider<TodoFolder>(managedObjectContext: CoreDataManager.shared.managedObjectContext,
-                                                sortDescriptors: sortDescriptors)
-    let tableView = GenericTableView<FolderTableViewCell, TodoFolder>(dataProvider: dataProvider) { (cell, folder) in
-      cell.model = folder
-    } selectionHandler: { [weak self] folder in
-      guard let self = self,
-            let folderTitle = folder.title else { return }
-      let todoListViewController = TodoListViewController(folder: folderTitle)
-      self.navigationController?.pushViewController(todoListViewController, animated: true)
+    let predicate = NSPredicate(format: "folder == %@", folder)
+    
+    let dataProvider = DataProvider<TodoItem>(managedObjectContext: CoreDataManager.shared.managedObjectContext,
+                                              sortDescriptors: sortDescriptors, predicate: predicate)
+    
+    let tableView = GenericTableView<TodoTableViewCell, TodoItem>(dataProvider: dataProvider) { (cell, todoItem) in
+      cell.model = todoItem
+    } selectionHandler: { todoItem in
+      print("\(todoItem.title ?? "")")
     }
+
     return tableView
   }()
   
@@ -39,14 +42,24 @@ class FolderListViewController: UIViewController {
     button.addTarget(self, action: #selector(didTapNew(_:)), for: .touchUpInside)
     return button
   }()
-
+  
+  // MARK: - Initializers -
+  init(folder: String) {
+    self.folder = folder
+    super.init(nibName: nil, bundle: nil)
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
   // MARK: - Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
     tableView.performFetch()
   }
-
+  
   // MARK: - Actions -
   @objc private func didTapNew(_ sender: UIButton) {
     let addNewItemViewController = AddNewItemViewController()
@@ -56,7 +69,8 @@ class FolderListViewController: UIViewController {
   
   // MARK: - Subviews and Constraints -
   func setupView() {
-    title = "Todo Folders"
+    title = "Todo Items for: \(folder)"
+    view.backgroundColor = .white
     view.addSubview(tableView)
     view.addSubview(addNewButton)
     setupConstraints()
@@ -78,9 +92,9 @@ class FolderListViewController: UIViewController {
 }
 
 // MARK: - AddNewItemViewControllerDelegate -
-extension FolderListViewController: AddNewItemViewControllerDelegate {
+extension TodoListViewController: AddNewItemViewControllerDelegate {
   func saveNewItem(item: String) {
-    CoreDataManager.shared.saveFolder(name: item)
+    CoreDataManager.shared.saveTodo(folder: folder, item: item)
     tableView.performFetch()
   }
 }
